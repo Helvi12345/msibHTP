@@ -1,0 +1,35 @@
+<script>
+    let pegawai = "Helvi Ayu Syahputri";
+    let jabatan = "Manager";
+    let status = "Menikah";
+
+    //gaji sesuai jabatan
+    let gaji = 0;
+    switch (jabatan) {
+        case 'Manager': gaji = 10000000; break;
+        case 'Asisten Manager': gaji = 8000000; break;
+        case 'Staf': gaji = 5000000; break;
+        default: gaji = 0;
+    }
+    // tunjangan keluarga jika sudah menikah atau belum menikah
+    let tunjangan_keluarga = 0;
+    if (status == 'Menikah') tunjangan_keluarga = 0.1 * gaji;
+    else if (status == 'Belum Menikah') tunjangan_keluarga = 0;
+    else tunjangan_keluarga = "";
+
+    let BPJS = 0.1 * gaji;
+    let tunjangan_jabatan = 0.1 * gaji;
+    let total_gaji = gaji - BPJS + tunjangan_jabatan + tunjangan_keluarga;
+
+    document.write("<h1 align='center'>Data gaji pegawai</h1>" +
+        "<hr/>" +
+        "<br> Nama pegawai : " + pegawai +
+        "<br> Jabatan : " + jabatan +
+        "<br> Status pegawai : " + status +
+        "<br> Gaji pokok : Rp." + gaji +
+        "<br> Potongan BPJS : Rp." + BPJS +
+        "<br> Tunjangan Jabatan : Rp." + tunjangan_jabatan +
+        "<br> Tunjangan Keluarga : Rp." + tunjangan_keluarga +
+        "<hr/>" +
+        "<br><b> Total gaji yang diterima : Rp." + total_gaji);
+</script>
