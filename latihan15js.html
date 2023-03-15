@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Javascript Tugas Perhitungan</title>
+    <link rel="stylesheet" type="text/css" href="css/kalkulator.css">
+</head>
+
+<body align="left">
+    <h1>
+        <marquee bgcolor="">Tugas Perhitungan</marquee>
+    </h1>
+    <form id="kalkulator">
+        <table style="width : 50%; background-color: lavender; border: solid; text-align: center;" border="1">
+            <tr>
+                <th>Operasi perhitungan Javascript</th>
+                <th>Nilai</th>
+            </tr>
+            <tr>
+                <td><label>Angka 1</label></td>
+                <td><input type="text" name="angka" placeholder="Masukkan angka pertama"></td>
+            </tr>
+            <tr>
+                <td><label>Angka 2 :</label></td>
+                <td><input type="text" name="angka2" placeholder="Masukkan angka kedua"></td>
+            </tr>
+            <tr>
+                <td><label>Hasil</label></td>
+                <td><input type="text" name="hasil" value="" disabled></td>
+            </tr>
+            <table style="width : 50%; background-color: lavender; border: solid; text-align: center;" border="1">
+                <tr>
+                    <td><label>Pilih perhitungan</label></td>
+                    <td><button type="button" name="btn_tambah" onclick="tambah()">+</button></td>
+                    <td><button type="button" name="btn_tambah" onclick="kurang()">-</button></td>
+                    <td><button type="button" name="btn_tambah" onclick="kali()">*</button></td>
+                    <td><button type="button" name="btn_tambah" onclick="bagi()">/</button></td>
+                    <td><button type="button" name="btn_tambah" onclick="pangkat()">**</button></td>
+                </tr>
+            </table>
+        </table>
+    </form>
+    <script src="js/kalkulator.js"></script>
+</body>
+
+</html>

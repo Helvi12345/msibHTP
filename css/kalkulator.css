@@ -1,0 +1,10 @@
+table {
+    border: 10px;
+    margin: auto;
+}
+
+body {
+    background-color: mediumorchid;
+    background-image: url(../img/nature.jpg);
+    margin: auto;
+}
