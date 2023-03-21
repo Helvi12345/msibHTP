@@ -1,0 +1,61 @@
+/* ini selector tag*/
+p {
+    color: palevioletred;
+    text-align: justify;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12pt;
+}
+
+body {
+    background-color: darkmagenta;
+    background-image: url(../img/cans.jpg);
+    background-repeat: no-repeat;
+}
+
+fieldset,
+legend {
+    border: black groove 5px;
+    border-radius: 30px;
+}
+
+legend {
+    padding: 10px;
+    font-weight: bold;
+    background-color: lavender;
+    font-size: 14pt;
+}
+
+table {
+    border: 10px;
+    margin: auto;
+}
+
+div#menu {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+}
+
+a.item:link,
+a.item:visited,
+a.item:active {
+    text-decoration: none;
+    font-size: 16pt;
+    color: rgb(0, 0, 0);
+    border: 2px solid black;
+    padding: 5px;
+    background-color: blueviolet;
+}
+
+li.menu {
+    color: black;
+}
+
+a.item:hover {
+    text-decoration: none;
+    font-size: 14pt;
+    color: slateblue;
+    border: 2px solid magenta;
+    padding: 15px;
+    background-color: azure;
+}
