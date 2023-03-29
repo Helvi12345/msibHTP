@@ -2,14 +2,14 @@
 $ar_prodi = ["SI" => "Sistem Informasi", "TI" => "Teknik Informatika", "ILKOM" => "Ilmu Komputer", "TE" => "Teknik Elektro"];
 
 $ar_skill = ["HTML" => 10, "CSS" => 10, "Javascript" => 20, "RWD Bootstrap" => 20, "PHP" => 30, "MySQL" => 30, "Laravel" => 40];
-$domisili = ["Jakarta", "Bandung", "Bekasi", "Malang", "Surabaya", "lainnya"];
+
 ?>
-<fieldset style="background-color:aquamarine;">
-    <legend>Form Registrasi Kelompok Belajar</legend>
+<fieldset style="background-color:lavender;">
+    <legend>Form Skor Skill Mahasiswa</legend>
     <table>
         <thead>
             <tr>
-                <th>Form Registrasi</th>
+                <th>Isi Form Skill</th>
             </tr>
         </thead>
         <tbody>
@@ -30,7 +30,7 @@ $domisili = ["Jakarta", "Bandung", "Bekasi", "Malang", "Surabaya", "lainnya"];
                     <td>Jenis Kelamin : </td>
                     <td>
                         <input type="radio" name="jk" value="Laki-laki">Laki-Laki &nbsp;
-                        <input type="radio" name="jk" value="Laki-laki">Perempuan
+                        <input type="radio" name="jk" value="Perempuan">Perempuan
                     </td>
                 </tr>
                 <tr>
@@ -58,16 +58,9 @@ $domisili = ["Jakarta", "Bandung", "Bekasi", "Malang", "Surabaya", "lainnya"];
                     </td>
                 </tr>
                 <tr>
-                    <td>Domisili: </td>
+                    <td>Email : </td>
                     <td>
-                        <select name="domisili">
-                            <?php
-
-                            foreach ($domisili as $d) {
-                            ?>
-                                <option value="<?= $d ?>"><?= $d ?></option>
-                            <?php } ?>
-                        </select>
+                        <input type="text" name="email">
                     </td>
                 </tr>
         <tfoot>
@@ -89,16 +82,17 @@ if (isset($_POST['proses'])) {
     $jk = $_POST['jk'];
     $prodi = $_POST['prodi'];
     $skill = $_POST['skill'];
-    $domisili = $_POST['domisili'];
+    $total = $_POST['skill'];
+    $email = $_POST['email'];
 }
 ?>
 NIM : <?= $nim ?><br>
 Nama : <?= $nama ?><br>
-Jenis Kelamin <?= $jk ?><br>
+Jenis Kelamin :<?= $jk ?><br>
 Program Studi : <?= $prodi ?><br>
 Skill :
 <?php
 foreach ($skill as $s) { ?>
-    <?= $s ?> ,
-<?php } ?>
-<br>Domisili : <?= $domisili ?>
+    <?= $s ?>
+<?php } ?><br>
+<br>Email : <?= $email ?>
