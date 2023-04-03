@@ -1,14 +1,15 @@
 <?php
 require_once 'Lingkaran.php';
-require_once 'Persegipanjang.php';
+require_once 'PersegiPanjang.php';
 require_once 'Segitiga.php';
 
-$l = new Lingkaran('Lingkaran', '14');
-$p = new Persegipanjang ('Persegi panjang', '15', '10');
-$s = new Segitiga ('Segitiga', '10', '12');
+$b1 = new Lingkaran (10);
+$b2 = new PerPan (20,15);
+$b3 = new Segitiga (30,40);
 
-$ar_data = [$l, $p, $s];
+$ar_data = [$b1, $b2, $b3];
 
 foreach ($ar_data as $data){
-    $data->cetak();
+    $data-> namaBidang();
+    $data-> cetak();
 }

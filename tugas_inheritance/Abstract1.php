@@ -1,12 +1,5 @@
 <?php
-class Bentuk2D
-{
-    public $luasBidang;
-    public $kelilingBidang;
-
-    public function cetak()
-    {
-        echo '<br> Luas' . $this->luasBidang();
-        echo '<br> Keliling' . $this->kelilingBidang();
-    }
+abstract class Bentuk2D {
+    abstract protected function luasBidang();
+    abstract protected function KelilingBidang();
 }
